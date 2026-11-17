@@ -202,9 +202,9 @@ I maintain a lightweight, bilingual engineering handbook for practical solo deve
 
 ## 📊 GitHub Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=forgottenlab&show_icons=true&theme=github_dark&hide_border=true)
+![GitHub Stats](https://github-stats-extended.vercel.app/api?username=forgottenlab&show_icons=true&theme=github_dark&hide_border=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=forgottenlab&layout=compact&theme=github_dark&hide_border=true)
+![Top Languages](https://github-stats-extended.vercel.app/api/top-langs/?username=forgottenlab&layout=compact&theme=github_dark&hide_border=true)
 
 ---
 
