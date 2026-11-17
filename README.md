@@ -192,6 +192,14 @@ I'm currently focusing on:
 
 ---
 
+## 📘 Engineering Practices
+
+I maintain a lightweight, bilingual engineering handbook for practical solo development and future collaboration. It focuses on safe defaults, understandable changes, and learning through feedback.
+
+[ForgottenLab Engineering Standards](https://github.com/forgottenlab/.github) · [English Handbook](https://github.com/forgottenlab/.github/blob/main/docs/standards/README.md) · [中文工程手册](https://github.com/forgottenlab/.github/blob/main/docs/standards/README.zh-CN.md)
+
+---
+
 ## 📊 GitHub Stats
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=forgottenlab&show_icons=true&theme=github_dark&hide_border=true)

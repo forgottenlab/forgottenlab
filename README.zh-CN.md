@@ -192,6 +192,14 @@
 
 ---
 
+## 📘 工程实践
+
+我维护了一份轻量级双语工程手册，用于日常个人开发与未来协作，关注安全默认值、清晰可理解的改动，以及通过真实反馈持续改进。
+
+[ForgottenLab Engineering Standards](https://github.com/forgottenlab/.github) · [English Handbook](https://github.com/forgottenlab/.github/blob/main/docs/standards/README.md) · [中文工程手册](https://github.com/forgottenlab/.github/blob/main/docs/standards/README.zh-CN.md)
+
+---
+
 ## 📊 GitHub 数据
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=forgottenlab&show_icons=true&theme=github_dark&hide_border=true)
