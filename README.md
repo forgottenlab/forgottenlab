@@ -37,33 +37,9 @@ But that does not make the effort meaningless, and it does not stop us from cont
 
 ## 💡 How These Projects Started
 
-Most of my projects did not start from abstract ideas.
+Most projects here grew out of a problem I ran into while learning, building software, or improving my own workflow. PathPilot began with messy Windows downloads and installation paths. The Java model generator grew out of repeatedly writing similar data classes.
 
-They usually came from real problems I encountered while learning, developing, or managing my own workflow. Before building my own tools, I usually tried existing tools and common solutions first. But in some scenarios, they were not flexible enough, not smooth enough, or did not fully match the way I wanted to work.
-
-So I started to study these problems myself and build small tools around real needs.
-
-For example:
-
-- When publishing a project to multiple Git remotes, writing repeated Git commands, managing version tags, and keeping the release process consistent can become tedious.  
-  This led me to build [`shipgit`](https://github.com/forgottenlab/shipgit), a lightweight Git publishing assistant.
-
-- When downloaded files and installers gradually made my Windows environment messy, I wanted a tool that could help organize files and guide installation paths more safely.  
-  This became [`pathpilot`](https://github.com/forgottenlab/pathpilot).
-
-- When I often needed to open several apps, websites, and commands together before starting a task, I began to think about a visual workflow launcher for Windows.  
-  This became [`launchflow`](https://github.com/forgottenlab/launchflow).
-
-- When working with Java backend projects, I noticed that DTO, Response, and Converter code often involved a lot of repetitive structure.  
-  This inspired [`entity-model-generator`](https://github.com/forgottenlab/entity-model-generator), a Java APT-based model generation tool.
-
-- When using MyBatis-Plus, I wanted a cleaner way to handle common CRUD, pagination, join queries, and lightweight SQL execution.  
-  This became [`smartorm`](https://github.com/forgottenlab/smartorm).
-
-- When thinking about how Java programs could call Python capabilities in a simpler and more structured way, I started experimenting with [`xbridge-runtime`](https://github.com/forgottenlab/xbridge-runtime).
-
-- When setting up personal network routes, I found that many tutorials were fragmented: some commands were server-side, some were client-side, and small configuration mistakes could break the whole setup.  
-  This led to [`reality-route-helper`](https://github.com/forgottenlab/reality-route-helper), a bilingual, platform-aware route helper for Xray / VLESS + Reality and future routes such as Outline, Hysteria2, TUIC, and sing-box.
+I start by looking for an existing implementation. If it fits, I reuse it. If a fix or extension would help others, I prefer contributing upstream. A separate project makes sense when it serves a distinct need, offers a safer workflow, or gives me room to test an idea worth exploring.
 
 ---
 
@@ -109,92 +85,42 @@ But I hope they can keep improving through real use, real feedback, and continuo
 
 ## 📌 Featured Projects
 
-### [`reality-route-helper`](https://github.com/forgottenlab/reality-route-helper)
+### [PathPilot](https://github.com/forgottenlab/pathpilot)
 
-A bilingual, platform-aware route helper for choosing, generating, testing, and managing network connection routes.
+An early Windows tool for organizing downloads and reviewing installer suggestions. It lets you review proposed actions before using them.
 
-The first implemented route is Xray / VLESS + Reality. It also includes environment scanning, safe config generation, sandbox tests, menu flow tests, and future expansion plans for Outline, Hysteria2, TUIC, sing-box, and panel-based solutions.
+### [RouteQuay](https://github.com/forgottenlab/RouteQuay)
 
-**Keywords:** Python, CLI Tool, Xray, VLESS, Reality, Network Tooling, Automation, Safe Testing
+An early source snapshot of a local-first CLI for Xray server operations over SSH. Its documented scope includes planning, installing or adopting a node, checking status, and exporting client configuration. It is currently available from source.
 
----
+### [Codex AGENTS Playbook](https://github.com/forgottenlab/codex-agents-playbook)
 
-### [`entity-model-generator`](https://github.com/forgottenlab/entity-model-generator)
+Reusable Codex instruction profiles and companion ChatGPT instructions for scoped, evidence-based engineering work.
 
-A Java APT-based model generation tool.
+### [Entity Model Generator](https://github.com/forgottenlab/entity-model-generator)
 
-It aims to reduce repetitive DTO / Response / Converter code by generating common model classes during compilation.
+A Java annotation processor that generates model classes such as DTOs, response types, and converters at compile time.
 
-**Keywords:** Java, Annotation Processing, Code Generation, APT, Developer Tooling
+### Earlier projects and prototypes
 
----
-
-### [`smartorm`](https://github.com/forgottenlab/smartorm)
-
-An annotation-driven enhancement toolkit for MyBatis-Plus.
-
-It focuses on cleaner CRUD, pagination, join queries, and lightweight native SQL execution while keeping the development experience simple.
-
-**Keywords:** Java, Spring Boot, MyBatis-Plus, ORM, Backend Tooling
-
----
-
-### [`xbridge-runtime`](https://github.com/forgottenlab/xbridge-runtime)
-
-A prototype cross-language runtime.
-
-The goal is to describe cross-language capabilities through interface definitions, generate bridge code, and make Java-to-Python invocation easier.
-
-**Keywords:** Java, Python, Code Generation, Runtime, Cross-language Bridge
-
----
-
-### [`shipgit`](https://github.com/forgottenlab/shipgit)
-
-A lightweight Git publishing assistant.
-
-It helps with safer commits, version tags, and multi-remote repository publishing.
-
-**Keywords:** Python, Git, CLI Tool, Automation
-
----
-
-### [`launchflow`](https://github.com/forgottenlab/launchflow)
-
-A visual launch workflow builder for Windows.
-
-It allows users to define launch sequences for apps, URLs, and commands, then package them into a simple executable workflow.
-
-**Keywords:** Python, Windows Tool, GUI, Workflow Automation
-
----
-
-### [`pathpilot`](https://github.com/forgottenlab/pathpilot)
-
-A Windows download and installation path governance assistant.
-
-It watches download folders, organizes files, and suggests safer installation locations outside the system drive.
-
-**Keywords:** Python, Windows Automation, File Management, Desktop Tool
+- [Reality Route Helper](https://github.com/forgottenlab/reality-route-helper) records an earlier approach to local Xray configuration and sandbox testing. Its [historical releases](https://github.com/forgottenlab/reality-route-helper/releases) remain available.
+- [ShipGit](https://github.com/forgottenlab/shipgit) is a prototype Git publishing assistant for commits, tags, and multiple remotes.
+- [XBridge Runtime](https://github.com/forgottenlab/xbridge-runtime) is a Java–Python bridge experiment using interface definitions and generated stubs.
+- [SmartORM](https://github.com/forgottenlab/smartorm) and [LaunchFlow](https://github.com/forgottenlab/launchflow) collect earlier work on MyBatis-Plus and Windows launch workflows.
 
 ---
 
 ## 🚧 Current Focus
 
-I'm currently focusing on:
-
-- Java annotation processing and compile-time code generation
-- Spring Boot backend development and MyBatis-Plus enhancement
-- Practical CLI tools and workflow automation
-- Safe configuration generation and sandbox testing
-- Cross-language runtime experiments
-- AI-assisted software systems
+- Reviewing and improving installer suggestions and download workflows on Windows.
+- Making Xray setup, inspection, and client configuration easier to verify.
+- Maintaining reusable engineering guidance and tools, including Java code generation.
 
 ---
 
 ## 📘 Engineering Practices
 
-I maintain a lightweight, bilingual engineering handbook for practical solo development and future collaboration. It focuses on safe defaults, understandable changes, and learning through feedback.
+I keep a lightweight bilingual handbook for day-to-day maintenance and collaboration. I look for ways to reuse existing work, contribute fixes upstream, and improve useful projects through real feedback. I keep experiments that teach something, with their scope and limitations documented.
 
 [ForgottenLab Engineering Standards](https://github.com/forgottenlab/.github) · [English Handbook](https://github.com/forgottenlab/.github/blob/main/docs/standards/README.md) · [中文工程手册](https://github.com/forgottenlab/.github/blob/main/docs/standards/README.zh-CN.md)
 

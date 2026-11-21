@@ -37,33 +37,9 @@
 
 ## 💡 这些项目从何而来
 
-我的大多数项目并不是从空想开始的。
+这里的大部分项目都源自我在学习、开发或改进工作流程时遇到的问题。PathPilot 起于 Windows 下载目录和安装路径的整理需求。Java 模型生成器来自反复编写相似数据类的经历。
 
-它们通常来自我在学习、开发或整理自己工作流时真实遇到的问题。在自己动手实现之前，我通常也会先尝试已有工具和常见解决方案。但在某些场景下，它们可能不够灵活、不够顺手，或者无法很好地适配我自己的使用方式。
-
-于是，我开始自己研究这些问题，并围绕真实需求构建一些小工具。
-
-举例来说：
-
-- 当我需要把项目发布到多个 Git 远程仓库时，重复编写 Git 命令、管理版本 Tag、保持发布流程一致会变得很繁琐。  
-  于是我开始构建 [`shipgit`](https://github.com/forgottenlab/shipgit)，一个轻量级 Git 发布助手。
-
-- 当 Windows 下载目录和安装包逐渐变得混乱时，我希望有一个工具可以帮助整理文件，并引导软件安装到更合适的位置。  
-  于是有了 [`pathpilot`](https://github.com/forgottenlab/pathpilot)。
-
-- 当我经常需要在开始某项任务前同时打开多个软件、网页和命令时，我开始思考能不能做一个可视化的启动流程编排工具。  
-  于是有了 [`launchflow`](https://github.com/forgottenlab/launchflow)。
-
-- 当我在 Java 后端项目中反复编写 DTO、Response、Converter 等结构相似的代码时，我开始尝试用编译期代码生成来减少重复劳动。  
-  于是有了 [`entity-model-generator`](https://github.com/forgottenlab/entity-model-generator)。
-
-- 当我使用 MyBatis-Plus 时，希望能用更清晰的方式处理常见 CRUD、分页、关联查询和轻量级 SQL 执行。  
-  于是有了 [`smartorm`](https://github.com/forgottenlab/smartorm)。
-
-- 当我思考 Java 程序如何更简单、更结构化地调用 Python 能力时，我开始尝试构建 [`xbridge-runtime`](https://github.com/forgottenlab/xbridge-runtime) 这样的跨语言运行时原型。
-
-- 当我搭建个人网络路线时，发现很多教程比较分散：有些命令属于服务端，有些属于客户端，而很小的配置错误也可能导致整个流程失败。  
-  于是有了 [`reality-route-helper`](https://github.com/forgottenlab/reality-route-helper)，一个面向 Xray / VLESS + Reality 的双语、跨平台感知路线助手，并计划扩展到 Outline、Hysteria2、TUIC、sing-box 等方案。
+我会先找已有实现。适用就直接复用。如果修复或扩展也能帮助其他使用者，我优先考虑贡献给上游。只有需求有独立价值、操作流程需要更安全，或值得单独验证一个想法时，我才考虑另建项目。
 
 ---
 
@@ -109,92 +85,42 @@
 
 ## 📌 代表项目
 
-### [`reality-route-helper`](https://github.com/forgottenlab/reality-route-helper)
+### [PathPilot](https://github.com/forgottenlab/pathpilot)
 
-一个双语、跨平台感知的网络连接路线助手，用于选择、生成、测试和管理不同网络连接方案。
+一个仍处于早期阶段的 Windows 工具，用来整理下载文件、查看安装建议。用户可以先审阅建议再采取行动。
 
-当前第一版重点实现 Xray / VLESS + Reality，并提供环境扫描、安全配置生成、沙盒测试、菜单流测试，同时计划扩展 Outline、Hysteria2、TUIC、sing-box 与面板类方案。
+### [RouteQuay](https://github.com/forgottenlab/RouteQuay)
 
-**关键词：** Python、CLI Tool、Xray、VLESS、Reality、网络工具、自动化、安全测试
+一个本地优先、通过 SSH 管理 Xray 的 CLI，目前公开的是早期源码快照。现有文档覆盖部署计划、安装或接管节点、状态检查和客户端配置导出，可从源码使用。
 
----
+### [Codex AGENTS Playbook](https://github.com/forgottenlab/codex-agents-playbook)
 
-### [`entity-model-generator`](https://github.com/forgottenlab/entity-model-generator)
+可复用的 Codex 指令配置与配套 ChatGPT 指令，用于明确开发范围并按证据验证。
 
-一个基于 Java APT 注解处理器的模型生成工具。
+### [Entity Model Generator](https://github.com/forgottenlab/entity-model-generator)
 
-它的目标是在编译期自动生成常见的 DTO、Response、Converter 等模型代码，从而减少重复开发，提高项目结构的可维护性。
+一个 Java 注解处理器，用于在编译期生成 DTO、响应类型和转换器等模型类。
 
-**关键词：** Java、Annotation Processing、Code Generation、APT、开发者工具
+### 早期项目与原型
 
----
-
-### [`smartorm`](https://github.com/forgottenlab/smartorm)
-
-一个基于注解驱动的 MyBatis-Plus 增强工具。
-
-它主要用于简化 CRUD、分页、关联查询与轻量级原生 SQL 执行，让 MyBatis-Plus 的使用体验更清晰、更工程化。
-
-**关键词：** Java、Spring Boot、MyBatis-Plus、ORM、后端工具
-
----
-
-### [`xbridge-runtime`](https://github.com/forgottenlab/xbridge-runtime)
-
-一个跨语言运行时原型项目。
-
-它尝试通过接口定义描述跨语言能力，并自动生成桥接代码，让 Java 调用 Python 能力变得更加简单。
-
-**关键词：** Java、Python、代码生成、运行时、跨语言桥接
-
----
-
-### [`shipgit`](https://github.com/forgottenlab/shipgit)
-
-一个轻量级 Git 发布助手。
-
-它用于辅助完成更安全的提交、版本 Tag 管理，以及多远程仓库发布流程。
-
-**关键词：** Python、Git、CLI 工具、自动化
-
----
-
-### [`launchflow`](https://github.com/forgottenlab/launchflow)
-
-一个面向 Windows 的可视化启动流程编排工具。
-
-它可以让用户可视化配置应用、网页、命令的启动顺序，并将流程打包成简单可执行的启动工具。
-
-**关键词：** Python、Windows 工具、GUI、工作流自动化
-
----
-
-### [`pathpilot`](https://github.com/forgottenlab/pathpilot)
-
-一个 Windows 下载与安装路径治理助手。
-
-它可以监听下载目录，自动整理文件，并建议将软件安装到系统盘以外的更合适位置。
-
-**关键词：** Python、Windows 自动化、文件管理、桌面工具
+- [Reality Route Helper](https://github.com/forgottenlab/reality-route-helper) 记录了较早的 Xray 本地配置与沙盒测试方案，[历史发行版](https://github.com/forgottenlab/reality-route-helper/releases)仍可获取。
+- [ShipGit](https://github.com/forgottenlab/shipgit) 是 Git 发布助手原型，用于辅助提交、管理版本标签和向多个远程仓库推送。
+- [XBridge Runtime](https://github.com/forgottenlab/xbridge-runtime) 是一个 Java–Python 桥接实验，通过接口定义生成调用桩。
+- [SmartORM](https://github.com/forgottenlab/smartorm) 和 [LaunchFlow](https://github.com/forgottenlab/launchflow) 分别记录了我早期对 MyBatis-Plus 和 Windows 启动流程的探索。
 
 ---
 
 ## 🚧 当前关注方向
 
-我目前主要关注：
-
-- Java 注解处理器与编译期代码生成
-- Spring Boot 后端开发与 MyBatis-Plus 增强
-- 实用 CLI 工具与工作流自动化
-- 安全配置生成与沙盒测试
-- 跨语言运行时实验
-- AI 辅助软件系统
+- 改进 Windows 下载文件整理流程和可审阅的安装建议。
+- 让 Xray 部署、状态检查和客户端配置更容易验证。
+- 持续维护可复用的工程指引与工具，包括 Java 代码生成。
 
 ---
 
 ## 📘 工程实践
 
-我维护了一份轻量级双语工程手册，用于日常个人开发与未来协作，关注安全默认值、清晰可理解的改动，以及通过真实反馈持续改进。
+我维护一份轻量级双语工程手册，用于日常维护和协作。我会先找可复用的工作，尽量把通用修复贡献给上游，并根据实际反馈改进已有项目。值得保留的实验会注明范围和限制，方便后来回看。
 
 [ForgottenLab Engineering Standards](https://github.com/forgottenlab/.github) · [English Handbook](https://github.com/forgottenlab/.github/blob/main/docs/standards/README.md) · [中文工程手册](https://github.com/forgottenlab/.github/blob/main/docs/standards/README.zh-CN.md)
 
