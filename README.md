@@ -103,10 +103,9 @@ A Java annotation processor that generates model classes such as DTOs, response 
 
 ### Earlier projects and prototypes
 
-- [Reality Route Helper](https://github.com/forgottenlab/reality-route-helper) records an earlier approach to local Xray configuration and sandbox testing. Its [historical releases](https://github.com/forgottenlab/reality-route-helper/releases) remain available.
-- [ShipGit](https://github.com/forgottenlab/shipgit) is a prototype Git publishing assistant for commits, tags, and multiple remotes.
-- [XBridge Runtime](https://github.com/forgottenlab/xbridge-runtime) is a Java–Python bridge experiment using interface definitions and generated stubs.
-- [SmartORM](https://github.com/forgottenlab/smartorm) and [LaunchFlow](https://github.com/forgottenlab/launchflow) collect earlier work on MyBatis-Plus and Windows launch workflows.
+[SmartORM](https://github.com/forgottenlab/smartorm) and [LaunchFlow](https://github.com/forgottenlab/launchflow) collect earlier work on MyBatis-Plus and Windows launch workflows.
+
+The repositories for earlier experiments in local Xray configuration and sandbox testing, Git publishing, and Java–Python bridging are now private.
 
 ---
 

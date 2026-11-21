@@ -103,10 +103,9 @@
 
 ### 早期项目与原型
 
-- [Reality Route Helper](https://github.com/forgottenlab/reality-route-helper) 记录了较早的 Xray 本地配置与沙盒测试方案，[历史发行版](https://github.com/forgottenlab/reality-route-helper/releases)仍可获取。
-- [ShipGit](https://github.com/forgottenlab/shipgit) 是 Git 发布助手原型，用于辅助提交、管理版本标签和向多个远程仓库推送。
-- [XBridge Runtime](https://github.com/forgottenlab/xbridge-runtime) 是一个 Java–Python 桥接实验，通过接口定义生成调用桩。
-- [SmartORM](https://github.com/forgottenlab/smartorm) 和 [LaunchFlow](https://github.com/forgottenlab/launchflow) 分别记录了我早期对 MyBatis-Plus 和 Windows 启动流程的探索。
+[SmartORM](https://github.com/forgottenlab/smartorm) 和 [LaunchFlow](https://github.com/forgottenlab/launchflow) 分别记录了我早期对 MyBatis-Plus 和 Windows 启动流程的探索。
+
+早期实验涵盖 Xray 本地配置与沙盒测试、Git 发布和 Java–Python 桥接，相关仓库现为私有。
 
 ---
 
