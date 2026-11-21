@@ -26,20 +26,19 @@
 
 ## 🧭 关于我
 
-- 🎓 软件工程方向学生，持续学习与实践中
-- 🛠️ 关注后端工程、开发者工具、自动化、网络工具与 AI 辅助应用
-- 🧩 喜欢把重复性的手动流程封装成可复用工具
-- 🔐 关注更安全的配置方式、先备份再修改的流程，以及减少真实环境中的误操作
-- 🌱 正在探索 Java 注解处理、代码生成、Spring Boot、跨语言运行时设计以及实用 CLI 工具
-- 🤝 欢迎反馈、测试、建议与简单协作
+- 🎓 软件工程方向学生，在动手实践中持续学习
+- 🛠️ 主要关注 Java 后端工程、框架设计、编译时代码生成、Spring Boot 生态和 Spring AI 集成
+- 🧩 也实践 Windows 自动化、网络管理和 CLI 工具，并探索 AI 辅助开发流程
+- 🔐 重视安全默认值、可审阅的改动，以及通过真实反馈验证和改进
+- 🤝 欢迎反馈、测试报告和上游协作
 
 ---
 
 ## 💡 这些项目从何而来
 
-这里的大部分项目都源自我在学习、开发或改进工作流程时遇到的问题。PathPilot 起于 Windows 下载目录和安装路径的整理需求。Java 模型生成器来自反复编写相似数据类的经历。
+我从学习和开发中反复遇到的问题出发。Java 项目关注重复的模型代码、常见的数据访问模式，以及 AI 应用如何组织业务上下文。Windows 和基础设施工具来自日常工作流程，希望让操作步骤更清晰、结果更容易验证。
 
-我会先找已有实现。适用就直接复用。如果修复或扩展也能帮助其他使用者，我优先考虑贡献给上游。只有需求有独立价值、操作流程需要更安全，或值得单独验证一个想法时，我才考虑另建项目。
+我会先找已有方案。能帮助其他使用者的修复或扩展，优先考虑贡献给上游。只有解决独立需求时才考虑另建项目，再通过测试和反馈持续改进。
 
 ---
 
@@ -85,35 +84,47 @@
 
 ## 📌 代表项目
 
-### [PathPilot](https://github.com/forgottenlab/pathpilot)
+### Java · 后端与 AI 工程
 
-一个仍处于早期阶段的 Windows 工具，用来整理下载文件、查看安装建议。用户可以先审阅建议再采取行动。
+#### [Entity Model Generator](https://github.com/forgottenlab/entity-model-generator)
 
-### [RouteQuay](https://github.com/forgottenlab/RouteQuay)
+基于 Java APT 在编译期生成 DTO、响应类型、转换器和分组单表 View，减少重复的模型代码。GitHub 已发布 `v1.2.2`，采用 Apache-2.0 许可证，可从源码构建并安装到本地 Maven 仓库。
 
-一个本地优先、通过 SSH 管理 Xray 的 CLI，目前公开的是早期源码快照。现有文档覆盖部署计划、安装或接管节点、状态检查和客户端配置导出，可从源码使用。
+#### [SmartORM](https://github.com/forgottenlab/smartorm)
 
-### [Codex AGENTS Playbook](https://github.com/forgottenlab/codex-agents-playbook)
+为 Spring Boot 和 MyBatis-Plus 提供按需启用的注解驱动 CRUD、分页、固定 JOIN 和参数化 SQL。Spring Boot Starter 为可本地安装的 `2.1.0-SNAPSHOT`，采用 Apache-2.0 许可证。
 
-可复用的 Codex 指令配置与配套 ChatGPT 指令，用于明确开发范围并按证据验证。
+#### [AI Context Orchestrator](https://github.com/forgottenlab/spring-ai-context-orchestrator)
 
-### [Entity Model Generator](https://github.com/forgottenlab/entity-model-generator)
+为 Spring AI 应用规划和加载业务上下文、处理冲突、按预算筛选内容，并将结果注入提示词。支持 Spring Boot 集成，提供离线示例，Starter 已通过模拟聊天模型验证。源码采用 Apache-2.0 许可证。
 
-一个 Java 注解处理器，用于在编译期生成 DTO、响应类型和转换器等模型类。
+### Windows · 桌面与自动化
 
-### 早期项目与原型
+#### [PathPilot](https://github.com/forgottenlab/pathpilot)
 
-[SmartORM](https://github.com/forgottenlab/smartorm) 和 [LaunchFlow](https://github.com/forgottenlab/launchflow) 分别记录了我早期对 MyBatis-Plus 和 Windows 启动流程的探索。
+整理 Windows 下载文件，并提供可以先审阅、再决定是否采纳的安装建议。GitHub 发行版 `v0.2.2` 是用于评估的 Alpha 原型，采用 MIT 许可证。
 
-早期实验涵盖 Xray 本地配置与沙盒测试、Git 发布和 Java–Python 桥接，相关仓库现为私有。
+#### [LaunchFlow](https://github.com/forgottenlab/launchflow)
+
+在 Windows 上可视化编排应用、网页、命令和等待步骤，将方案保存为 JSON 并导出启动器。GitHub 预发布版 `v0.1.0-beta.2` 处于 Beta 阶段，采用离线授权，保留所有权利。
+
+### 基础设施 · 开发工具
+
+#### [RouteQuay](https://github.com/forgottenlab/RouteQuay)
+
+本地优先的 CLI，支持规划 Xray 部署、通过 SSH 安装或接管节点、检查状态及导出客户端配置。目前提供 MIT 许可的早期源码快照，尚未发布版本化安装器或 GitHub Release。
+
+#### [Codex AGENTS Playbook](https://github.com/forgottenlab/codex-agents-playbook)
+
+提供可复用的 Codex 指令配置和配套 ChatGPT 指令，用于明确协作范围、保护私有输入并验证执行结果。这是采用 MIT 许可证的独立社区项目。
 
 ---
 
 ## 🚧 当前关注方向
 
-- 改进 Windows 下载文件整理流程和可审阅的安装建议。
-- 让 Xray 部署、状态检查和客户端配置更容易验证。
-- 持续维护可复用的工程指引与工具，包括 Java 代码生成。
+- Java 后端工程、可复用框架和编译期模型生成。
+- Spring Boot 集成，以及可验证的 Spring AI 业务上下文编排。
+- 可审阅的 Windows 自动化、可核查的网络操作，以及实用的 CLI 与 AI 辅助开发流程。
 
 ---
 

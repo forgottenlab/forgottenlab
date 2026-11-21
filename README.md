@@ -26,20 +26,19 @@ But that does not make the effort meaningless, and it does not stop us from cont
 
 ## 🧭 About Me
 
-- 🎓 Software engineering student, continuously learning and building
-- 🛠️ Interested in backend engineering, developer tools, automation, network tooling, and AI-assisted applications
-- 🧩 I like turning repeated manual workflows into reusable tools
-- 🔐 I care about safer configuration, backup-first workflows, and reducing mistakes in real environments
-- 🌱 Currently exploring Java annotation processing, code generation, Spring Boot, cross-language runtime ideas, and practical CLI tools
-- 🤝 Open to feedback, testing, suggestions, and simple collaboration
+- 🎓 Software engineering student, learning through hands-on projects
+- 🛠️ I focus on Java backend engineering, framework design, compile-time code generation, the Spring Boot ecosystem, and Spring AI integration
+- 🧩 I also build Windows automation, network management and CLI tools, and explore AI-assisted development workflows
+- 🔐 I prefer safer defaults, reviewable changes, and verification through real feedback
+- 🤝 I welcome feedback, test reports, and upstream collaboration
 
 ---
 
 ## 💡 How These Projects Started
 
-Most projects here grew out of a problem I ran into while learning, building software, or improving my own workflow. PathPilot began with messy Windows downloads and installation paths. The Java model generator grew out of repeatedly writing similar data classes.
+I work on recurring problems I encounter while learning and building software. The Java projects address repetitive model code, recurring data-access patterns, and the work of assembling business context for AI applications. The tools for Windows and infrastructure come from everyday workflows that benefit from clearer steps and verifiable results.
 
-I start by looking for an existing implementation. If it fits, I reuse it. If a fix or extension would help others, I prefer contributing upstream. A separate project makes sense when it serves a distinct need, offers a safer workflow, or gives me room to test an idea worth exploring.
+I look for existing solutions first. When a fix or extension can help others, I prefer contributing upstream. I build a separate project when it serves a distinct need, and improve it through testing and feedback.
 
 ---
 
@@ -85,35 +84,47 @@ But I hope they can keep improving through real use, real feedback, and continuo
 
 ## 📌 Featured Projects
 
-### [PathPilot](https://github.com/forgottenlab/pathpilot)
+### Java · Backend & AI Engineering
 
-An early Windows tool for organizing downloads and reviewing installer suggestions. It lets you review proposed actions before using them.
+#### [Entity Model Generator](https://github.com/forgottenlab/entity-model-generator)
 
-### [RouteQuay](https://github.com/forgottenlab/RouteQuay)
+A Java APT processor that reduces model boilerplate by generating DTOs, response types, converters, and grouped single-table Views at compile time. GitHub release `v1.2.2` is available under Apache-2.0 and can be built from source for local Maven use.
 
-An early source snapshot of a local-first CLI for Xray server operations over SSH. Its documented scope includes planning, installing or adopting a node, checking status, and exporting client configuration. It is currently available from source.
+#### [SmartORM](https://github.com/forgottenlab/smartorm)
 
-### [Codex AGENTS Playbook](https://github.com/forgottenlab/codex-agents-playbook)
+An opt-in Spring Boot and MyBatis-Plus enhancement library for annotation-driven CRUD, pagination, fixed JOINs, and parameterized SQL. The Spring Boot Starter is a locally installable `2.1.0-SNAPSHOT`. Licensed under Apache-2.0.
 
-Reusable Codex instruction profiles and companion ChatGPT instructions for scoped, evidence-based engineering work.
+#### [AI Context Orchestrator](https://github.com/forgottenlab/spring-ai-context-orchestrator)
 
-### [Entity Model Generator](https://github.com/forgottenlab/entity-model-generator)
+A Spring AI library that plans and loads business context, resolves conflicts, selects context within a budget, and injects it into prompts. It integrates with Spring Boot, with an offline quickstart and a Starter verified using a fake chat model. Available from source under Apache-2.0.
 
-A Java annotation processor that generates model classes such as DTOs, response types, and converters at compile time.
+### Windows · Desktop & Automation
 
-### Earlier projects and prototypes
+#### [PathPilot](https://github.com/forgottenlab/pathpilot)
 
-[SmartORM](https://github.com/forgottenlab/smartorm) and [LaunchFlow](https://github.com/forgottenlab/launchflow) collect earlier work on MyBatis-Plus and Windows launch workflows.
+A Windows tool that organizes downloads and offers installer suggestions for users to review before acting. GitHub release `v0.2.2` is an alpha prototype for evaluation. Licensed under MIT.
 
-The repositories for earlier experiments in local Xray configuration and sandbox testing, Git publishing, and Java–Python bridging are now private.
+#### [LaunchFlow](https://github.com/forgottenlab/launchflow)
+
+A visual Windows editor for arranging app, web, command, and wait steps, saving plans as JSON, and exporting Windows launchers. GitHub prerelease `v0.1.0-beta.2` is a Beta with offline licensing. All rights reserved.
+
+### Infrastructure · Developer Tools
+
+#### [RouteQuay](https://github.com/forgottenlab/RouteQuay)
+
+A local-first CLI for planning Xray deployments, installing or adopting nodes over SSH, checking status, and exporting client configuration. Available as an early MIT-licensed source snapshot, with versioned installers and GitHub Releases still pending.
+
+#### [Codex AGENTS Playbook](https://github.com/forgottenlab/codex-agents-playbook)
+
+Reusable Codex instruction profiles and companion ChatGPT instructions for planning scoped work, protecting private inputs, and verifying results. An independent community project licensed under MIT.
 
 ---
 
 ## 🚧 Current Focus
 
-- Reviewing and improving installer suggestions and download workflows on Windows.
-- Making Xray setup, inspection, and client configuration easier to verify.
-- Maintaining reusable engineering guidance and tools, including Java code generation.
+- Java backend engineering, reusable frameworks, and compile-time model generation.
+- Spring Boot integration and verifiable business-context orchestration for Spring AI applications.
+- Reviewable Windows automation, inspectable network operations, and practical CLI and AI-assisted development workflows.
 
 ---
 
